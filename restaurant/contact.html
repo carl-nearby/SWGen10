@@ -1,0 +1,141 @@
+<!DOCTYPE html> 
+<!--
+ Name: Carl Close 
+ Date Created: 5/1/19 
+ Most recent revision: 5/9/19
+-->
+<html lang="en"> 
+	<head> 
+		<title>Contact Us</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">	
+		<link rel="stylesheet" type="text/css" href="styles/restaurantStyles.css">
+		<link href="https://fonts.googleapis.com/css?family=Modak" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		
+		<script>
+			
+			function validForm(){
+				var nameCheck = document.forms["contactForm"]["fullName"];
+				var valName = nameCheck.value.length;
+				var phCheck = document.forms["contactForm"]["phone"];
+				var valPh = phCheck.value.length;
+				
+				if (valName == 0){
+					alert('We require your name for... reasons. Good reasons. Wholesome reasons. Please give us your name.');
+					} else if (valPh != 10){
+						alert('Phone numbers are 10 digits long. You can\'t fool us. Not like that. Not again.');
+						} else if (isNaN(phCheck.value)){
+							alert('Phone numbers are numbers and hyphens confuse us.');
+				} else {
+					alert('Thank you for the valid name and phone number. We will in no way use this data maliciously.');
+				}
+			}
+		</script>
+		
+		<style>
+
+			#subm {
+				margin-right: 50px;
+			}
+
+			.form-check-input {
+				margin-right: 3px;
+			}
+
+			div {
+				background-color: #ede5ff;
+				margin: 0 !important;
+			}
+			
+			.button-clr {
+				background-color: #420039;
+				color: #E07BE0;
+			}
+
+		</style>
+		<noscript>JavaScript is disabled in your browser. This website is best viewed with JavaScript enabled</noscript>
+
+	</head>
+    
+	<body>
+		<header class="pt-3">
+			<h1>Fabuoloso's Fine Fish and Flapjacks</h1>
+        	</header>
+
+		<nav>
+
+		<hr/>
+		
+		<a href="index.html" class="btn nav-pill"><i class="fa fa-home fa-lg"></i></a>
+		<a href="menu.html" class="btn nav-pill">Menu</a>
+		<a href="contact.html" class="btn nav-pill">Contact Us</a>
+
+		<hr/>
+
+		</nav>
+		<div class="mt-0 pt-4 pb-3">
+		<form onsubmit="validForm();" method="POST" name="contactForm" id="contactForm" class="col-lg-7 col-md-7 col-sm-7 text-right">
+
+			<div class="form-group">
+			<label for="fullName"><b>Name:</b></label>
+			<input type="text" name="fullName" id="fullName"/><br/>
+			</div>
+
+			<div class="form-group">
+			<label for="email">Email:</label>
+			<input type="email" name="email"/><br/>
+			</div>
+
+			<div class="form-group">
+			<label for="phone"><b>Phone:</b></label>
+			<input type="text" name="phone"/><br/>
+			</div>
+
+			<div class="form-group">
+			<label for="reason">Reason for Inquiry:</label>
+			<select name="reason" /*style="width: 173px"*/>
+				<option value="catering" selected>Catering</option>
+				<option value="privateParty">Private Party</option>
+				<option value="feedback">Feedback</option>
+				<option value="other">Other</option>
+			</select><br/>
+			</div>
+
+			<div class="form-group">
+			<label for="info" style="vertical-align: top">Additional Information:</label>
+			<textarea name="info" cols="21" rows="5"></textarea><br/>
+			</div>
+
+			<div class="form-group">
+			<label for="answer">Have you been to the restaurant?</label>
+			<input type="radio" name="answer" value="no" checked>No
+			<input type="radio" name="answer" value="yes">Yes<br/>
+			</div>
+
+			<div class="form-check form-check-inline">
+			<p class="mb-0">Best days to contact you: &nbsp;</p>
+			<input type="checkbox" class="form-check-input" name="days" value="mon"/><label class="form-check-label" for="mon">M &nbsp;</label>
+			<input type="checkbox" class="form-check-input" name="tues"/><label class="form-check-label" for="tues">T &nbsp;</label>
+			<input type="checkbox" class="form-check-input" name="wednes"/><label class="form-check-label" for="wednes">W &nbsp;</label>
+			<input type="checkbox" class="form-check-input" name="thurs"/><label class="form-check-label" for="thurs">Th &nbsp;</label>
+			<input type="checkbox" class="form-check-input" name="fri"/><label class="form-check-label" for="fri">F &nbsp;</label>
+			</div>	
+			<br/><br/>
+
+			<div id="subm">
+			<input type="submit" class="btn btn-basic mr-5 button-clr" value="Send Request"/>
+			</div>
+
+		</form>
+		</div>
+
+		<footer>
+		<hr/>
+		<p style="text-align: center">101 Weird Craving Ave, Wamsutter WY 82336</p>
+		<p style="text-align: center">Ph. 307-555-1010</p>
+		</footer>
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+	</body> 
+</html>

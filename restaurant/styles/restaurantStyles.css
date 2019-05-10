@@ -1,0 +1,61 @@
+/*
+*Name: Carl Close 
+*Create date: 5/4/19
+*Last revision: 5/9/19
+*/
+
+body {
+	font-family: comic sans ms, sans-serif;
+	color: #420039;
+}
+
+header {
+	text-align: center;
+	font-family: modak;
+}
+
+p {
+	font-family: comic sans ms, sans-serif;
+	text-align: center;
+}
+
+nav {
+	text-align: left;
+}
+
+a {
+	margin: 0 16px;
+	color: #DCCCFF;
+	text-decoration: none;
+	background-color: #420039;
+}
+
+a:visited {
+	color: #E07BE0;
+	text-decoration: none;
+}
+
+a:hover {
+	font-weight: bold;
+	text-decoration: none;
+}
+
+a:link {
+	color: #DCCCFF;
+}
+
+.carousel-item.active {
+    display:block;
+}
+
+.carousel-inner {
+	background-color: #ede5ff;
+}
+
+.carousel-item img {
+	height: 320px;
+}
+
+hr {
+	border-color: #932F6D;
+}
